@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1096</width>
+    <height>642</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Правила</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>../media/minesweeper_redbomb.png</normalon>
+   </iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-image: url('media/logo_back.tif');
+background-position: left;
+background-size: cover;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;1) Цель игры – открыть все ячейки, не содержащие мины.&lt;/p&gt;&lt;p&gt;2) В начале поле пустое. Вы нажимаете на любую ячейку для первого хода – с этого момента запускается таймер.&lt;/p&gt;&lt;p&gt;3) Если вы открываете ячейку с миной, игра заканчивается.&lt;/p&gt;&lt;p&gt;4) Числа в ячейках показывают, сколько мин находится рядом. Используйте это, чтобы избегать мин.&lt;/p&gt;&lt;p&gt;5) Флажки: щелкните правой кнопкой мыши на ячейке, чтобы пометить её флажком, если думаете, что там мина.&lt;/p&gt;&lt;p&gt;6) Победа, если все безопасные ячейки открыты, а мины – помечены флажками.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="exit">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        background-color: rgb(120, 120, 120); /* Приглушенный красный цвет */
+        color: white; /* Белый цвет текста */
+        border: none; /* Убирает рамку, при необходимости */
+        padding: 8px; /* Отступы внутри кнопки */
+		border-radius: 10px; /* Закругление углов кнопки */
+    }
+    QPushButton:hover {
+        background-color: rgb(168, 168, 168); /* Цвет при наведении */
+    }
+    QPushButton:pressed {
+        background-color: rgb(207, 207, 207); /* Цвет при нажатии */
+    }</string>
+        </property>
+        <property name="text">
+         <string>Назад</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1096</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

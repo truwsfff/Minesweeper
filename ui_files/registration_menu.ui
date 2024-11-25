@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>835</width>
+    <height>504</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Регистрация/вход</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normalon>../media/minesweeper_redbomb.png</normalon>
+   </iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+background-image: url('media/logo_back.tif');
+background-position: left;
+background-size: cover;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="choi_registration_bt">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        background-color: rgb(120, 120, 120); /* Приглушенный красный цвет */
+        color: white; /* Белый цвет текста */
+        border: none; /* Убирает рамку, при необходимости */
+        padding: 8px; /* Отступы внутри кнопки */
+		border-radius: 10px; /* Закругление углов кнопки */
+    }
+    QPushButton:hover {
+        background-color: rgb(168, 168, 168); /* Цвет при наведении */
+    }
+    QPushButton:pressed {
+        background-color: rgb(207, 207, 207); /* Цвет при нажатии */
+    }</string>
+        </property>
+        <property name="text">
+         <string>Регистрация</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="choi_in_bt">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+        background-color: rgb(120, 120, 120); /* Приглушенный красный цвет */
+        color: white; /* Белый цвет текста */
+        border: none; /* Убирает рамку, при необходимости */
+        padding: 8px; /* Отступы внутри кнопки */
+		border-radius: 10px; /* Закругление углов кнопки */
+    }
+    QPushButton:hover {
+        background-color: rgb(168, 168, 168); /* Цвет при наведении */
+    }
+    QPushButton:pressed {
+        background-color: rgb(207, 207, 207); /* Цвет при нажатии */
+    }</string>
+        </property>
+        <property name="text">
+         <string>Вход</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="registation_text">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+            </property>
+            <property name="text">
+             <string>Регистрация</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="registration_error">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: red;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QPushButton" name="registration_dal">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+        background-color: rgb(120, 120, 120); /* Приглушенный красный цвет */
+        color: white; /* Белый цвет текста */
+        border: none; /* Убирает рамку, при необходимости */
+        padding: 8px; /* Отступы внутри кнопки */
+		border-radius: 10px; /* Закругление углов кнопки */
+    }
+    QPushButton:hover {
+        background-color: rgb(168, 168, 168); /* Цвет при наведении */
+    }
+    QPushButton:pressed {
+        background-color: rgb(207, 207, 207); /* Цвет при нажатии */
+    }
+QPushButton:disabled {
+    color: #bbbfbc;                            /* Цвет текста для выключенной кнопки */
+    background-color: #636363;              /* Светлый фон для выключенной кнопки */
+}</string>
+            </property>
+            <property name="text">
+             <string>Далее</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <layout class="QFormLayout" name="formLayout">
+            <property name="horizontalSpacing">
+             <number>7</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>40</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="QLabel" name="registration_login_text">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+              </property>
+              <property name="text">
+               <string>Логин:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="registration_password_text">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+              </property>
+              <property name="text">
+               <string>Пароль:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="registration_password">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    color: white;                  /* Цвет текста */
+    background-color: #333333;     /* Цвет фона */
+    border: 1px solid #cccccc;     /* Граница */
+	border-radius: 3px;
+}
+QLineEdit:disabled {
+    background-color: #262626;     /* Серый фон */
+    color: #666666;                /* Тусклый текст */
+    border: 1px solid #999999;     /* Светлая граница */
+}</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="registration_login">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    color: white;                  /* Цвет текста */
+    background-color: #333333;     /* Цвет фона */
+    border: 1px solid #cccccc;     /* Граница */
+	border-radius: 3px;
+}
+QLineEdit:disabled {
+    background-color: #262626;     /* Серый фон */
+    color: #666666;                /* Тусклый текст */
+    border: 1px solid #999999;     /* Светлая граница */
+}</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Normal</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="regist_checkbox">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+        color: white; /* Белый цвет текста */
+    }
+QCheckBox::indicator {
+    width: 15px;                   /* Ширина квадрата индикатора */
+    height: 15px;                  /* Высота квадрата индикатора */
+    border: 1px solid #cccccc;     /* Граница индикатора */
+    background-color: #333333;     /* Фон индикатора */
+    border-radius: 2px;            /* Скругление углов */
+}
+QCheckBox::indicator:checked {
+    border-color:#0ea113;         /* Граница при включении */
+    background-color: #4c754e;
+}
+QCheckBox:disabled {
+    color: #8c8f8c;                          /* Серый цвет текста */
+}
+QCheckBox::indicator:disabled {
+    border: 1px solid #999999;               /* Светлая граница */
+}</string>
+            </property>
+            <property name="text">
+             <string>Показать пароль</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QLabel" name="in_text">
+            <property name="font">
+             <font>
+              <pointsize>14</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+            </property>
+            <property name="text">
+             <string>Вход</string>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::AutoText</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <layout class="QFormLayout" name="formLayout_7">
+            <property name="horizontalSpacing">
+             <number>7</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>40</number>
+            </property>
+            <item row="1" column="0">
+             <widget class="QLabel" name="in_login_text">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+              </property>
+              <property name="text">
+               <string>Логин:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QLineEdit" name="in_login">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    color: white;                  /* Цвет текста */
+    background-color: #333333;     /* Цвет фона */
+    border: 1px solid #cccccc;     /* Граница */
+	border-radius: 3px;
+}
+QLineEdit:disabled {
+    background-color: #262626;     /* Серый фон */
+    color: #666666;                /* Тусклый текст */
+    border: 1px solid #999999;     /* Светлая граница */
+}</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Normal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="in_password_text">
+              <property name="font">
+               <font>
+                <pointsize>11</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+              </property>
+              <property name="text">
+               <string>Пароль:</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="in_password">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    color: white;                  /* Цвет текста */
+    background-color: #333333;     /* Цвет фона */
+    border: 1px solid #cccccc;     /* Граница */
+	border-radius: 3px;
+}
+QLineEdit:disabled {
+    background-color: #262626;     /* Серый фон */
+    color: #666666;                /* Тусклый текст */
+    border: 1px solid #999999;     /* Светлая граница */
+}</string>
+              </property>
+              <property name="echoMode">
+               <enum>QLineEdit::Password</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="5" column="0">
+           <widget class="QPushButton" name="in_dal">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+        background-color: rgb(120, 120, 120); /* Приглушенный красный цвет */
+        color: white; /* Белый цвет текста */
+        border: none; /* Убирает рамку, при необходимости */
+        padding: 8px; /* Отступы внутри кнопки */
+		border-radius: 10px; /* Закругление углов кнопки */
+    }
+    QPushButton:hover {
+        background-color: rgb(168, 168, 168); /* Цвет при наведении */
+    }
+    QPushButton:pressed {
+        background-color: rgb(207, 207, 207); /* Цвет при нажатии */
+    }
+QPushButton:disabled {
+    color: #bbbfbc;                            /* Цвет текста для выключенной кнопки */
+    background-color: #636363;              /* Светлый фон для выключенной кнопки */
+}</string>
+            </property>
+            <property name="text">
+             <string>Далее</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="in_error">
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: red;</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="log_in_checkbox">
+            <property name="font">
+             <font>
+              <pointsize>9</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QCheckBox {
+        color: white; /* Белый цвет текста */
+    }
+QCheckBox::indicator {
+    width: 15px;                   /* Ширина квадрата индикатора */
+    height: 15px;                  /* Высота квадрата индикатора */
+    border: 1px solid #cccccc;     /* Граница индикатора */
+    background-color: #333333;     /* Фон индикатора */
+    border-radius: 2px;            /* Скругление углов */
+}
+QCheckBox::indicator:checked {
+    border-color:#0ea113;         /* Граница при включении */
+    background-color: #4c754e;
+}
+QCheckBox:disabled {
+    color: #8c8f8c;                          /* Серый цвет текста */
+}
+QCheckBox::indicator:disabled {
+    border: 1px solid #999999;               /* Светлая граница */
+}</string>
+            </property>
+            <property name="text">
+             <string>Показать пароль</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+        </property>
+        <property name="text">
+         <string>• Пароль должен состоять из не менее 5 символов, а логин не меньше 4 и не более 15 символов</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel {
+        color: white; /* Белый цвет текста */
+    }</string>
+        </property>
+        <property name="text">
+         <string>• Логин может содержать буквы русского/латинского языка, цифры и нижнее подчеркивание</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>835</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
